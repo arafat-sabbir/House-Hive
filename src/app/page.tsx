@@ -1,6 +1,16 @@
-import Navbar from "@/components/shared/Navbar";
-import Image from "next/image";
+import Advertise from "@/components/home/Advertise";
+import Banner from "@/components/home/Banner";
 
-export default function Home() {
-  return <Navbar />;
-}
+const Home = () => {
+  return (
+    <div className="lg:mt-[100px]">
+      <Banner />
+      <Advertise />
+      {/* <LatestReview />
+      <SeeRooms />
+      <Ourpartner /> */}
+    </div>
+  );
+};
+
+export default Home;

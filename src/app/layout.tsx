@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Onest } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/shared/Navbar";
+import Footer from "@/components/shared/Footer";
 
 const onest = Onest({
   subsets: ["latin"],
@@ -18,7 +20,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={` ${onest.className} antialiased`}>{children}</body>
+      <body className={` ${onest.className} antialiased`}>
+        <>
+          <Navbar></Navbar>
+          {children}
+          <Footer></Footer>
+        </>
+      </body>
     </html>
   );
 }
